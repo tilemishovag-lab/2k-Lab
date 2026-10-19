@@ -1,0 +1,18 @@
+<script>
+  function maskCard(card, symbol = "X") {
+      let result = "";
+
+      for (let i = 0; i < card.length; i++) {
+          if (i < 6 || i >= card.length - 4) {
+              result += card[i];
+          } else {
+              result += symbol;
+          }
+      }
+
+      return result;
+  }
+
+  document.write(maskCard("7564937528463719"));      // "756493XXXXXX3719"
+  document.write(maskCard("7564937528463719", "*")); // "756493******3719"
+</script>

@@ -1,0 +1,12 @@
+<script>
+    function getRange(start, end, step = 1) {
+        let result = [];
+        for (let i = start; i <= end; i += step) {
+            result.push(i);
+        }
+        return result;
+    }
+
+    document.write(getRange(1, 10) + "<br>");
+    document.write(getRange(10, 30, 5));
+</script>
