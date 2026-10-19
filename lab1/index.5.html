@@ -1,0 +1,17 @@
+const color = prompt("Введите цвет светофора:").toLowerCase();
+
+switch (color) {
+  case "красный":
+    console.log("Стой!");
+    break;
+  case "желтый":
+  case "жёлтый":
+    console.log("Жди!");
+    break;
+  case "зеленый":
+  case "зелёный":
+    console.log("Иди!");
+    break;
+  default:
+    console.log("Неизвестный цвет");
+}
