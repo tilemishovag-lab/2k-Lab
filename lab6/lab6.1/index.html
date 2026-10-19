@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная — Грамматика английского языка</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Времена английского языка</h1>
+    <p>Интерактивный пастельный справочник по грамматике</p>
+  </header>
+
+  <nav class="main-nav">
+    <a href="index.html" class="nav-btn active">🏠 Главная</a>
+    <a href="page1.html" class="nav-btn" data-cat="present">1. Present Simple</a>
+    <a href="page2.html" class="nav-btn" data-cat="present">2. Present Continuous</a>
+    <a href="page3.html" class="nav-btn" data-cat="present">3. Present Perfect</a>
+    <a href="page4.html" class="nav-btn" data-cat="present">4. Present Perf. Cont.</a>
+    <a href="page5.html" class="nav-btn" data-cat="past">5. Past Simple</a>
+    <a href="page6.html" class="nav-btn" data-cat="past">6. Past Continuous</a>
+    <a href="page7.html" class="nav-btn" data-cat="past">7. Past Perfect</a>
+    <a href="page8.html" class="nav-btn" data-cat="past">8. Past Perf. Cont.</a>
+    <a href="page9.html" class="nav-btn" data-cat="future">9. Future Simple</a>
+    <a href="page10.html" class="nav-btn" data-cat="future">10. Future Continuous</a>
+  </nav>
+
+  <main class="container">
+    <section class="welcome-card">
+      <h2>Добро пожаловать в учебный справочник!</h2>
+      <p>Выберите интересующую категорию или конкретное время из меню выше, чтобы изучить формулу, примеры использования и маркеры времени.</p>
+    </section>
+
+    <div class="categories-grid">
+      <div class="category-card present">
+        <span class="category-badge">Настоящее</span>
+        <h3>Present Tenses</h3>
+        <p>Действия, происходящие в настоящем, регулярные события и факты.</p>
+        <ul class="home-links">
+          <li><a href="page1.html">Present Simple</a></li>
+          <li><a href="page2.html">Present Continuous</a></li>
+          <li><a href="page3.html">Present Perfect</a></li>
+          <li><a href="page4.html">Present Perfect Continuous</a></li>
+        </ul>
+      </div>
+
+      <div class="category-card past">
+        <span class="category-badge">Прошедшее</span>
+        <h3>Past Tenses</h3>
+        <p>Завершённые и длившиеся действия, произошедшие в прошлом.</p>
+        <ul class="home-links">
+          <li><a href="page5.html">Past Simple</a></li>
+          <li><a href="page6.html">Past Continuous</a></li>
+          <li><a href="page7.html">Past Perfect</a></li>
+          <li><a href="page8.html">Past Perfect Continuous</a></li>
+        </ul>
+      </div>
+
+      <div class="category-card future">
+        <span class="category-badge">Будущее</span>
+        <h3>Future Tenses</h3>
+        <p>Прогнозы, планы, обещания и действия в будущем.</p>
+        <ul class="home-links">
+          <li><a href="page9.html">Future Simple</a></li>
+          <li><a href="page10.html">Future Continuous</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="welcome-card" style="margin-top: 25px; text-align: left;">
+      <h3>Форма обратной связи</h3>
+      <form id="contactForm" novalidate style="margin-top: 15px;">
+        <div class="form-group">
+          <label for="fullname">ФИО</label>
+          <input 
+            type="text" 
+            id="fullname" 
+            name="fullname" 
+            placeholder="ФИО"
+            required
+          >
+          <span class="error-message" id="fullnameError">Введите корректное ФИО (буквы, пробелы, дефис)</span>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Номер телефона</label>
+          <input 
+            type="tel" 
+            id="phone" 
+            name="phone" 
+            placeholder="+996********* или 0********"
+            required
+          >
+          <span class="error-message" id="phoneError">Введите номер в формате +996707090197 или 0707090197</span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Электронная почта</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="email.@gmail.com"
+            required
+          >
+          <span class="error-message" id="emailError">Введите корректный email-адрес</span>
+        </div>
+
+        <button type="submit" class="nav-btn" style="cursor: pointer; width: 100%; border: none; padding: 10px;">Отправить</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
