@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music World</title>
+    <link rel="stylesheet" href="music.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>♫ Music World</h1>
+            <p>Открой музыку, которая тебе нравится</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="list-section">
+            <h2>Популярная музыка</h2>
+            <div id="product-grid" class="grid"></div>
+        </section>
+
+        <section id="detail-section" class="modal hidden">
+            <div class="modal-content">
+                <span id="close-btn" class="close">&times;</span>
+                <div id="detail-card"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>♪ Music World — мир твоей музыки</p>
+    </footer>
+
+    <script src="music.js"></script>
+</body>
+</html>
