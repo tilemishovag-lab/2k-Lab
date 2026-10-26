@@ -1,0 +1,57 @@
+[
+    { 
+      "id": 1,
+      "name": "Dynamite",
+      "artist": "BTS",
+      "genre": "K-pop, Disco-pop",
+      "year": 2020,
+      "image": "music.image/music1.jpg",
+      "description": "Яркая и энергичная песня BTS с позитивным настроением и танцевальным звучанием.",
+      "album": "BE",
+      "duration": "3:19"
+    },
+    {
+      "id": 2,
+      "name": "Standing Next to You",
+      "artist": "Jung Kook",
+      "genre": "Pop, R&B",
+      "year": 2023,
+      "image": "music.image/music2.jpg",
+      "description": "Динамичная сольная композиция с выразительным вокалом и ретро-звучанием.",
+      "album": "GOLDEN",
+      "duration": "3:26"
+    },
+    {
+      "id": 3,
+      "name": "Deja Vu",
+      "artist": "TOMORROW X TOGETHER",
+      "genre": "K-pop, Pop-rock",
+      "year": 2024,
+      "image": "music.image/music3.jpg",
+      "description": "Эмоциональная песня TXT о воспоминаниях, обещаниях и особенной связи.",
+      "album": "minisode 3: TOMORROW",
+      "duration": "2:51"
+    },
+    {
+      "id": 4,
+      "name": "Magnetic",
+      "artist": "ILLIT",
+      "genre": "K-pop, Dance-pop",
+      "year": 2024,
+      "image": "music.image/music4.jpg",
+      "description": "Лёгкая танцевальная композиция с запоминающимся припевом.",
+      "album": "SUPER REAL ME",
+      "duration": "2:40"
+    },
+    {
+      "id": 5,
+      "name": "SOLO",
+      "artist": "JENNIE",
+      "genre": "K-pop, Pop",
+      "year": 2018,
+      "image": "music.image/music5.jpg",
+      "description": "Сольная композиция с элементами поп-музыки и электронного звучания.",
+      "album": "SOLO",
+      "duration": "2:49"
+    }
+  ]
