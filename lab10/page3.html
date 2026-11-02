@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Present Perfect — Времена английского языка</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Времена английского языка</h1>
+    <p>Интерактивный пастельный справочник по грамматике</p>
+  </header>
+
+  <nav class="main-nav">
+    <a href="index.html" class="nav-btn">🏠 Главная</a>
+    <a href="page1.html" class="nav-btn" data-cat="present">1. Present Simple</a>
+    <a href="page2.html" class="nav-btn" data-cat="present">2. Present Continuous</a>
+    <a href="page3.html" class="nav-btn active" data-cat="present">3. Present Perfect</a>
+    <a href="page4.html" class="nav-btn" data-cat="present">4. Present Perf. Cont.</a>
+    <a href="page5.html" class="nav-btn" data-cat="past">5. Past Simple</a>
+    <a href="page6.html" class="nav-btn" data-cat="past">6. Past Continuous</a>
+    <a href="page7.html" class="nav-btn" data-cat="past">7. Past Perfect</a>
+    <a href="page8.html" class="nav-btn" data-cat="past">8. Past Perf. Cont.</a>
+    <a href="page9.html" class="nav-btn" data-cat="future">9. Future Simple</a>
+    <a href="page10.html" class="nav-btn" data-cat="future">10. Future Continuous</a>
+  </nav>
+
+  <main class="container">
+    
+    <article class="tense-card present">
+      <span class="category-badge">Настоящее время</span>
+      <h2>3. Present Perfect — Настоящее совершённое</h2>
+      <p class="description"><strong>Когда используется:</strong> действие уже произошло, и его результат важен сейчас.</p>
+
+      <div class="toggle-buttons">
+        <button class="toggle-btn active" data-target="formula">Формула</button>
+        <button class="toggle-btn" data-target="examples">Примеры</button>
+        <button class="toggle-btn" data-target="markers">Маркеры</button>
+      </div>
+
+      <div class="content-box">
+        <div id="formula" class="tab-content active">
+          <pre class="formula-text">
+(+) Subject + have / has + V3
+(−) Subject + have / has + not + V3
+(?) Have / Has + subject + V3?
+          </pre>
+        </div>
+
+        <div id="examples" class="tab-content">
+          <ul class="list">
+            <li>I have finished my homework. — <em>Я закончила домашнюю работу.</em></li>
+            <li>She has visited London. — <em>Она побывала в Лондоне.</em></li>
+          </ul>
+        </div>
+
+        <div id="markers" class="tab-content">
+          <div class="tags">
+            <span class="tag">already</span>
+            <span class="tag">just</span>
+            <span class="tag">yet</span>
+            <span class="tag">ever</span>
+            <span class="tag">never</span>
+            <span class="tag">since</span>
+            <span class="tag">for</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <section class="quiz-card">
+      <h3>Мини-тест</h3>
+      <p>Выберите правильную формулу для Present Perfect:</p>
+      <div class="quiz-options">
+        <button onclick="checkAnswer(this, true)">Subject + have / has + V3</button>
+        <button onclick="checkAnswer(this, false)">Subject + had + V3</button>
+        <button onclick="checkAnswer(this, false)">Subject + will + V1</button>
+
+      </div>
+      <p class="quiz-result"></p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
