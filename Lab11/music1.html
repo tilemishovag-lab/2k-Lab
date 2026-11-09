@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music World</title>
+    <link rel="stylesheet" href="music.css">
+    <style>
+        .modal.hidden { display: none !important; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>♫ Music World</h1>
+            <p>Открой музыку, которая тебе нравится</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="form-section">
+            <h2 id="formTitle">Добавить новый трек</h2>
+            <form id="trackForm">
+                <input type="hidden" id="trackId">
+
+                <div class="form-row">
+                    <input type="text" id="trackName" placeholder="Название трека *" required>
+                    <input type="text" id="trackArtist" placeholder="Исполнитель *" required>
+                </div>
+
+                <div class="form-row">
+                    <input type="text" id="trackGenre" placeholder="Жанр">
+                    <input type="number" id="trackYear" placeholder="Год">
+                </div>
+
+                <div class="form-row">
+                    <input type="text" id="trackAlbum" placeholder="Альбом">
+                    <input type="text" id="trackDuration" placeholder="Длительность (3:30)">
+                </div>
+
+                <div class="form-row">
+                    <input type="text" id="trackImage" placeholder="Путь к картинке (music.image/music1.jpg)">
+                </div>
+
+                <div class="form-row">
+                    <textarea id="trackDescription" placeholder="Описание трека..." rows="3"></textarea>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" id="submitBtn" class="btn-submit">Добавить трек</button>
+                    <button type="button" id="cancelBtn" class="btn-cancel" style="display: none;">Отмена</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="list-section">
+            <h2>Популярная музыка</h2>
+            <div id="product-grid" class="grid"></div>
+        </section>
+
+        <section id="detail-section" class="modal hidden">
+            <div class="modal-content">
+                <span id="close-btn" class="close">X</span>
+                <div id="detail-card"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>♪ Music World — мир твоей музыки</p>
+    </footer>
+
+    <script src="music.js"></script>
+</body>
+</html>
