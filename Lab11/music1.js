@@ -18,7 +18,7 @@ async function loadMusic() {
         musicData = JSON.parse(saved);
     } else {
         try {
-            const res = await fetch('music.json');
+            const res = await fetch('music1.json');
             if (res.ok) {
                 musicData = await res.json();
             } else {
