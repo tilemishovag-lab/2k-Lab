@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная — Грамматика английского языка</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Времена английского языка</h1>
+    <p>Интерактивный пастельный справочник по грамматике</p>
+    <button type="button" id="themeToggle" class="nav-btn" style="margin-top: 12px; cursor: pointer;">🌙 Тёмная тема</button>
+  </header>
+
+  <nav class="main-nav">
+    <a href="index.html" class="nav-btn active">🏠 Главная</a>
+    <a href="page1.html" class="nav-btn" data-cat="present">1. Present Simple</a>
+    <a href="page2.html" class="nav-btn" data-cat="present">2. Present Continuous</a>
+    <a href="page3.html" class="nav-btn" data-cat="present">3. Present Perfect</a>
+    <a href="page4.html" class="nav-btn" data-cat="present">4. Present Perf. Cont.</a>
+    <a href="page5.html" class="nav-btn" data-cat="past">5. Past Simple</a>
+    <a href="page6.html" class="nav-btn" data-cat="past">6. Past Continuous</a>
+    <a href="page7.html" class="nav-btn" data-cat="past">7. Past Perfect</a>
+    <a href="page8.html" class="nav-btn" data-cat="past">8. Past Perf. Cont.</a>
+    <a href="page9.html" class="nav-btn" data-cat="future">9. Future Simple</a>
+    <a href="page10.html" class="nav-btn" data-cat="future">10. Future Continuous</a>
+  </nav>
+
+  <main class="container">
+    <section class="welcome-card">
+      <h2>Добро пожаловать в учебный справочник!</h2>
+      <p>Выберите интересующую категорию или конкретное время из меню выше, чтобы изучить формулу, примеры использования и маркеры времени.</p>
+      
+      <div class="progress-container">
+        <div class="progress-info">
+          <span>Прогресс изучения:</span>
+          <strong id="progressText">0 из 10 (0%)</strong>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="welcome-card" style="text-align: left;">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+        <h3>💡 Фраза дня</h3>
+        <button type="button" id="newPhraseBtn" class="nav-btn" style="cursor: pointer;">🔄 Новый пример</button>
+      </div>
+      <div class="phrase-display" style="margin-top: 12px;">
+        <p id="phraseEn" style="font-weight: bold; font-size: 1.05rem;"></p>
+        <p id="phraseRu" style="color: #718096; margin: 4px 0 8px 0;"></p>
+        <span id="phraseTense" class="category-badge" style="background: #edf2f7; color: #2d3748;"></span>
+        <p id="phraseNote" style="font-size: 0.9rem; margin-top: 6px;"></p>
+      </div>
+    </section>
+
+    <section class="welcome-card" style="text-align: left;">
+      <h3>🔍 Поиск по словам-маркерам и фильтр</h3>
+      <div class="search-controls" style="margin-top: 12px;">
+        <input 
+          type="text" 
+          id="markerSearchInput" 
+          placeholder="Введите маркер (например: yesterday, already, now, tomorrow, for)..."
+        >
+        <div class="filter-group">
+          <button type="button" class="nav-btn filter-cat-btn active" data-filter="all">Все</button>
+          <button type="button" class="nav-btn filter-cat-btn" data-filter="present">Present</button>
+          <button type="button" class="nav-btn filter-cat-btn" data-filter="past">Past</button>
+          <button type="button" class="nav-btn filter-cat-btn" data-filter="future">Future</button>
+        </div>
+      </div>
+      <p id="searchStatus" style="font-size: 0.85rem; margin-top: 8px; color: #718096;"></p>
+    </section>
+
+    <div class="categories-grid">
+      <div class="category-card present" data-category="present">
+        <span class="category-badge">Настоящее</span>
+        <h3>Present Tenses</h3>
+        <p>Действия, происходящие в настоящем, регулярные события и факты.</p>
+        <ul class="home-links">
+          <li data-markers="always usually often sometimes every day never">
+            <input type="checkbox" class="tense-checkbox" data-id="page1">
+            <a href="page1.html">Present Simple</a>
+          </li>
+          <li data-markers="now at the moment look listen right now currently">
+            <input type="checkbox" class="tense-checkbox" data-id="page2">
+            <a href="page2.html">Present Continuous</a>
+          </li>
+          <li data-markers="already just yet ever never since for recently">
+            <input type="checkbox" class="tense-checkbox" data-id="page3">
+            <a href="page3.html">Present Perfect</a>
+          </li>
+          <li data-markers="for since all day how long lately">
+            <input type="checkbox" class="tense-checkbox" data-id="page4">
+            <a href="page4.html">Present Perfect Continuous</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="category-card past" data-category="past">
+        <span class="category-badge">Прошедшее</span>
+        <h3>Past Tenses</h3>
+        <p>Завершённые и длившиеся действия, произошедшие в прошлом.</p>
+        <ul class="home-links">
+          <li data-markers="yesterday ago last week last year in 2020">
+            <input type="checkbox" class="tense-checkbox" data-id="page5">
+            <a href="page5.html">Past Simple</a>
+          </li>
+          <li data-markers="while when at 5 pm yesterday all evening">
+            <input type="checkbox" class="tense-checkbox" data-id="page6">
+            <a href="page6.html">Past Continuous</a>
+          </li>
+          <li data-markers="by the time before after already">
+            <input type="checkbox" class="tense-checkbox" data-id="page7">
+            <a href="page7.html">Past Perfect</a>
+          </li>
+          <li data-markers="for since before how long">
+            <input type="checkbox" class="tense-checkbox" data-id="page8">
+            <a href="page8.html">Past Perfect Continuous</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="category-card future" data-category="future">
+        <span class="category-badge">Будущее</span>
+        <h3>Future Tenses</h3>
+        <p>Прогнозы, планы, обещания и действия в будущем.</p>
+        <ul class="home-links">
+          <li data-markers="tomorrow next week next year soon probably i think">
+            <input type="checkbox" class="tense-checkbox" data-id="page9">
+            <a href="page9.html">Future Simple</a>
+          </li>
+          <li data-markers="this time tomorrow at 6 pm tomorrow all day tomorrow">
+            <input type="checkbox" class="tense-checkbox" data-id="page10">
+            <a href="page10.html">Future Continuous</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="quiz-card" style="margin-top: 25px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+        <h3>⏱️ Мини-тест на время</h3>
+        <span id="quizTimer" class="category-badge" style="background: #e1f5fe; color: #01579b; margin: 0;">Время: 0 сек.</span>
+      </div>
+
+      <div id="quizStartBlock" style="margin-top: 12px;">
+        <p>Ответьте на 5 вопросов. Секундомер покажет, за сколько минут и секунд вы справились, а после завершения вы увидите разбор ответов.</p>
+        <button type="button" id="startQuizBtn" class="nav-btn" style="margin-top: 10px; cursor: pointer;">Начать тест</button>
+      </div>
+
+      <div id="quizActiveBlock" style="display: none; margin-top: 15px;">
+        <p id="quizQuestionText" style="font-weight: bold; font-size: 1.05rem;"></p>
+        <div id="quizOptionsList" class="quiz-options"></div>
+      </div>
+
+      <div id="quizResultBlock" style="display: none; margin-top: 15px;">
+        <p id="quizFinalScore" class="quiz-result"></p>
+        <div id="quizReviewList" style="margin-top: 12px; display: flex; flex-direction: column; gap: 10px;"></div>
+        <button type="button" id="restartQuizBtn" class="nav-btn" style="margin-top: 15px; cursor: pointer;">Пройти заново</button>
+      </div>
+    </section>
+
+    <section class="welcome-card" style="margin-top: 25px; text-align: left;">
+      <h3>Форма обратной связи</h3>
+      <form id="contactForm" novalidate style="margin-top: 15px;">
+        <div class="form-group">
+          <label for="fullname">ФИО</label>
+          <input 
+            type="text" 
+            id="fullname" 
+            name="fullname" 
+            placeholder="ФИО"
+            required
+          >
+          <span class="error-message" id="fullnameError">Введите корректное ФИО (буквы, пробелы, дефис)</span>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Номер телефона</label>
+          <input 
+            type="tel" 
+            id="phone" 
+            name="phone" 
+            placeholder="+996********* или 0********"
+            required
+          >
+          <span class="error-message" id="phoneError">Введите номер в формате +996707090197 или 0707090197</span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Электронная почта</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="email.@gmail.com"
+            required
+          >
+          <span class="error-message" id="emailError">Введите корректный email-адрес</span>
+        </div>
+
+        <button type="submit" class="nav-btn" style="cursor: pointer; width: 100%; border: none; padding: 10px;">Отправить</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

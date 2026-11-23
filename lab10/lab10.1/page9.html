@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Future Simple — Времена английского языка</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Времена английского языка</h1>
+    <p>Интерактивный пастельный справочник по грамматике</p>
+  </header>
+
+  <nav class="main-nav">
+    <a href="index.html" class="nav-btn">🏠 Главная</a>
+    <a href="page1.html" class="nav-btn" data-cat="present">1. Present Simple</a>
+    <a href="page2.html" class="nav-btn" data-cat="present">2. Present Continuous</a>
+    <a href="page3.html" class="nav-btn" data-cat="present">3. Present Perfect</a>
+    <a href="page4.html" class="nav-btn" data-cat="present">4. Present Perf. Cont.</a>
+    <a href="page5.html" class="nav-btn" data-cat="past">5. Past Simple</a>
+    <a href="page6.html" class="nav-btn" data-cat="past">6. Past Continuous</a>
+    <a href="page7.html" class="nav-btn" data-cat="past">7. Past Perfect</a>
+    <a href="page8.html" class="nav-btn" data-cat="past">8. Past Perf. Cont.</a>
+    <a href="page9.html" class="nav-btn active" data-cat="future">9. Future Simple</a>
+    <a href="page10.html" class="nav-btn" data-cat="future">10. Future Continuous</a>
+  </nav>
+
+  <main class="container">
+    
+    <article class="tense-card future">
+      <span class="category-badge">Будущее время</span>
+      <h2>9. Future Simple — Будущее простое</h2>
+      <p class="description"><strong>Когда используется:</strong> прогнозы, обещания, решения, принятые в момент разговора.</p>
+
+      <div class="toggle-buttons">
+        <button class="toggle-btn active" data-target="formula">Формула</button>
+        <button class="toggle-btn" data-target="examples">Примеры</button>
+        <button class="toggle-btn" data-target="markers">Маркеры</button>
+      </div>
+
+      <div class="content-box">
+        <div id="formula" class="tab-content active">
+          <pre class="formula-text">
+(+) Subject + will + V1
+(−) Subject + will not (won't) + V1
+(?) Will + subject + V1?
+          </pre>
+        </div>
+
+        <div id="examples" class="tab-content">
+          <ul class="list">
+            <li>I will call you tomorrow. — <em>Я позвоню тебе завтра.</em></li>
+            <li>She will help us. — <em>Она поможет нам.</em></li>
+          </ul>
+        </div>
+
+        <div id="markers" class="tab-content">
+          <div class="tags">
+            <span class="tag">tomorrow</span>
+            <span class="tag">next week</span>
+            <span class="tag">soon</span>
+            <span class="tag">probably</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <section class="quiz-card">
+      <h3>Мини-тест</h3>
+      <p>Выберите правильную формулу для Future Simple:</p>
+      <div class="quiz-options">
+        <button onclick="checkAnswer(this, true)">Subject + will + V1</button>
+        <button onclick="checkAnswer(this, false)">Subject + would + V1</button>
+        <button onclick="checkAnswer(this, false)">Subject + will be + V-ing</button>
+
+      </div>
+      <p class="quiz-result"></p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

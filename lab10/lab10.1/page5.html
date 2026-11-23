@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Past Simple — Времена английского языка</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Времена английского языка</h1>
+    <p>Интерактивный пастельный справочник по грамматике</p>
+  </header>
+
+  <nav class="main-nav">
+    <a href="index.html" class="nav-btn">🏠 Главная</a>
+    <a href="page1.html" class="nav-btn" data-cat="present">1. Present Simple</a>
+    <a href="page2.html" class="nav-btn" data-cat="present">2. Present Continuous</a>
+    <a href="page3.html" class="nav-btn" data-cat="present">3. Present Perfect</a>
+    <a href="page4.html" class="nav-btn" data-cat="present">4. Present Perf. Cont.</a>
+    <a href="page5.html" class="nav-btn active" data-cat="past">5. Past Simple</a>
+    <a href="page6.html" class="nav-btn" data-cat="past">6. Past Continuous</a>
+    <a href="page7.html" class="nav-btn" data-cat="past">7. Past Perfect</a>
+    <a href="page8.html" class="nav-btn" data-cat="past">8. Past Perf. Cont.</a>
+    <a href="page9.html" class="nav-btn" data-cat="future">9. Future Simple</a>
+    <a href="page10.html" class="nav-btn" data-cat="future">10. Future Continuous</a>
+  </nav>
+
+  <main class="container">
+    
+    <article class="tense-card past">
+      <span class="category-badge">Прошедшее время</span>
+      <h2>5. Past Simple — Прошедшее простое</h2>
+      <p class="description"><strong>Когда используется:</strong> завершённое действие в прошлом.</p>
+
+      <div class="toggle-buttons">
+        <button class="toggle-btn active" data-target="formula">Формула</button>
+        <button class="toggle-btn" data-target="examples">Примеры</button>
+        <button class="toggle-btn" data-target="markers">Маркеры</button>
+      </div>
+
+      <div class="content-box">
+        <div id="formula" class="tab-content active">
+          <pre class="formula-text">
+(+) Subject + V2 / V-ed
+(−) Subject + did not + V1
+(?) Did + subject + V1?
+          </pre>
+        </div>
+
+        <div id="examples" class="tab-content">
+          <ul class="list">
+            <li>I watched a movie yesterday. — <em>Я смотрела фильм вчера.</em></li>
+            <li>He went to school. — <em>Он пошёл в школу.</em></li>
+          </ul>
+        </div>
+
+        <div id="markers" class="tab-content">
+          <div class="tags">
+            <span class="tag">yesterday</span>
+            <span class="tag">last week</span>
+            <span class="tag">ago</span>
+            <span class="tag">in 2020</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <section class="quiz-card">
+      <h3>Мини-тест</h3>
+      <p>Какое предложение составлено правильно в Past Simple?</p>
+      <div class="quiz-options">
+        <button onclick="checkAnswer(this, false)">I have watched a movie yesterday.</button>
+        <button onclick="checkAnswer(this, false)">I watch a movie yesterday.</button>
+        <button onclick="checkAnswer(this, true)">I watched a movie yesterday.</button>
+      </div>
+      <p class="quiz-result"></p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
